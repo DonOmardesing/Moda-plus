@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CG Moda Plus | Ropa y Accesorios Exclusivos para Mujer en Medellín</title>
+    <meta name="description" content="Tienda online de ropa y accesorios exclusivos para mujer en Medellín. Envíos rápidos a toda Colombia. Asesoría de estilo personalizada por WhatsApp.">
+    <meta name="keywords" content="ropa mujer medellin, accesorios mujer, tienda online colombia, moda exclusiva, ropa premium">
+    <meta property="og:title" content="CG Moda Plus | Elegancia Exclusiva para Mujer">
+    <meta property="og:description" content="Descubre nuestra curaduría de prendas y accesorios premium. Envíos desde Medellín a toda Colombia.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200">
+    <meta property="og:url" content="https://cgmodaplus.com">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--gold:#D4AF37;--gold-light:#E5C870;--bone:#FAF7F2;--dark:#2C2C2C;--gray:#6B6B6B;--white:#FFFFFF;--shadow:0 4px 20px rgba(0,0,0,0.08);--transition:all 0.3s ease}
+        body{font-family:'Montserrat',sans-serif;color:var(--dark);background:var(--bone);line-height:1.6;overflow-x:hidden}
+        h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:600}
+        .container{max-width:1200px;margin:0 auto;padding:0 20px}
+        .text-accent{color:var(--gold)}
+        
+        /* TOP BANNER */
+        .top-banner{background:var(--dark);color:var(--bone);text-align:center;padding:10px;font-size:0.85rem;letter-spacing:0.5px}
+        .top-banner i{color:var(--gold);margin-right:8px}
+        
+        /* HEADER */
+        header{background:var(--white);box-shadow:var(--shadow);position:sticky;top:0;z-index:1000}
+        .nav-container{display:flex;justify-content:space-between;align-items:center;padding:20px}
+        .logo{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:600;color:var(--dark);text-decoration:none}
+        .nav-links{display:flex;list-style:none;gap:30px}
+        .nav-links a{text-decoration:none;color:var(--dark);font-weight:500;transition:var(--transition);position:relative}
+        .nav-links a:hover{color:var(--gold)}
+        .nav-links a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:2px;background:var(--gold);transition:var(--transition)}
+        .nav-links a:hover::after{width:100%}
+        .social-icons{display:flex;gap:15px}
+        .social-icons a{color:var(--dark);font-size:1.2rem;transition:var(--transition)}
+        .social-icons a:hover{color:var(--gold);transform:translateY(-3px)}
+        .hamburger{display:none;flex-direction:column;cursor:pointer;gap:5px}
+        .hamburger span{width:25px;height:3px;background:var(--dark);transition:var(--transition)}
+        
+        /* HERO */
+        .hero{background:linear-gradient(135deg,rgba(44,44,44,0.7),rgba(212,175,55,0.3)),url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070');background-size:cover;background-position:center;height:600px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--white);position:relative}
+        .hero-content h1{font-size:3.5rem;margin-bottom:20px;animation:fadeInUp 1s ease}
+        .hero-content p{font-size:1.3rem;margin-bottom:30px;font-weight:300;animation:fadeInUp 1s ease 0.2s backwards}
+        .btn{display:inline-block;padding:15px 40px;background:var(--gold);color:var(--white);text-decoration:none;border-radius:50px;font-weight:600;transition:var(--transition);border:none;cursor:pointer;font-size:1rem}
+        .btn:hover{background:var(--gold-light);transform:translateY(-3px);box-shadow:0 10px 30px rgba(212,175,55,0.4)}
+        .btn-outline{background:transparent;border:2px solid var(--gold);color:var(--gold)}
+        .btn-outline:hover{background:var(--gold);color:var(--white)}
+        
+        /* TRUST BADGES */
+        .trust-badges{background:var(--white);padding:40px 0}
+        .badges-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;text-align:center}
+        .badge{padding:20px}
+        .badge i{font-size:2.5rem;color:var(--gold);margin-bottom:15px}
+        .badge h4{font-size:1.1rem;margin-bottom:8px}
+        .badge p{color:var(--gray);font-size:0.9rem}
+        
+        /* SECTIONS */
+        section{padding:80px 0}
+        .section-title{text-align:center;margin-bottom:60px}
+        .section-title h2{font-size:2.5rem;margin-bottom:15px}
+        .section-title p{color:var(--gray);font-size:1.1rem}
+        
+        /* PRODUCTS */
+        .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:30px}
+        .product-card{background:var(--white);border-radius:15px;overflow:hidden;box-shadow:var(--shadow);transition:var(--transition);position:relative}
+        .product-card:hover{transform:translateY(-10px);box-shadow:0 15px 40px rgba(0,0,0,0.15)}
+        .product-badge{position:absolute;top:15px;right:15px;background:var(--gold);color:var(--white);padding:5px 15px;border-radius:20px;font-size:0.8rem;font-weight:600;z-index:10}
+        .product-image{height:350px;overflow:hidden;position:relative}
+        .product-image img{width:100%;height:100%;object-fit:cover;transition:var(--transition)}
+        .product-card:hover .product-image img{transform:scale(1.1)}
+        .favorite-btn{position:absolute;top:15px;left:15px;background:var(--white);border:none;width:40px;height:40px;border-radius:50%;cursor:pointer;transition:var(--transition);z-index:10}
+        .favorite-btn:hover{transform:scale(1.1)}
+        .favorite-btn i{color:var(--gray);font-size:1.2rem}
+        .favorite-btn.active i{color:#e74c3c}
+        .product-info{padding:25px}
+        .product-info h3{font-size:1.4rem;margin-bottom:10px}
+        .product-info p{color:var(--gray);margin-bottom:15px;font-size:0.95rem}
+        .product-price{font-size:1.5rem;color:var(--gold);font-weight:600;margin-bottom:20px}
+        .product-actions{display:flex;gap:10px}
+        .product-actions .btn{flex:1;padding:12px;font-size:0.9rem}
+        
+        /* HOW IT WORKS */
+        .how-it-works{background:var(--white)}
+        .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;text-align:center}
+        .step{padding:30px}
+        .step-number{width:60px;height:60px;background:var(--gold);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:600;margin:0 auto 20px}
+        .step h3{margin-bottom:15px}
+        .step p{color:var(--gray)}
+        
+        /* REVIEWS */
+        .reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+        .review-card{background:var(--white);padding:30px;border-radius:15px;box-shadow:var(--shadow)}
+        .review-stars{color:var(--gold);margin-bottom:15px}
+        .review-text{font-style:italic;margin-bottom:20px;color:var(--gray)}
+        .review-author{font-weight:600}
+        
+        /* NEWSLETTER */
+        .newsletter{background:linear-gradient(135deg,var(--dark),var(--gold));color:var(--white);text-align:center}
+        .newsletter h2{color:var(--white);margin-bottom:20px}
+        .newsletter p{margin-bottom:30px;font-size:1.1rem}
+        .newsletter-form{max-width:500px;margin:0 auto;display:flex;gap:10px}
+        .newsletter-form input{flex:1;padding:15px;border:none;border-radius:50px;font-size:1rem}
+        .newsletter-form button{padding:15px 40px;background:var(--gold);color:var(--white);border:none;border-radius:50px;cursor:pointer;font-weight:600;transition:var(--transition)}
+        .newsletter-form button:hover{background:var(--gold-light)}
+        
+        /* FOOTER */
+        footer{background:var(--dark);color:var(--bone);padding:60px 0 20px}
+        .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;margin-bottom:40px}
+        .footer-col h4{color:var(--gold);margin-bottom:20px}
+        .footer-col ul{list-style:none}
+        .footer-col ul li{margin-bottom:10px}
+        .footer-col a{color:var(--bone);text-decoration:none;transition:var(--transition)}
+        .footer-col a:hover{color:var(--gold)}
+        .footer-bottom{text-align:center;padding-top:30px;border-top:1px solid rgba(255,255,255,0.1);color:var(--gray)}
+        
+        /* WHATSAPP FLOAT */
+        .whatsapp-float{position:fixed;bottom:30px;right:30px;background:#25D366;color:var(--white);width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 5px 20px rgba(37,211,102,0.4);z-index:999;transition:var(--transition);text-decoration:none}
+        .whatsapp-float:hover{transform:scale(1.1);box-shadow:0 8px 30px rgba(37,211,102,0.6)}
+        
+        /* MODAL */
+        .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:2000;align-items:center;justify-content:center}
+        .modal.active{display:flex}
+        .modal-content{background:var(--white);padding:40px;border-radius:15px;max-width:600px;width:90%;max-height:80vh;overflow-y:auto;position:relative}
+        .modal-close{position:absolute;top:15px;right:15px;background:none;border:none;font-size:2rem;cursor:pointer;color:var(--gray)}
+        .modal-content h2{margin-bottom:20px;color:var(--gold)}
+        .modal-content h3{margin:20px 0 10px}
+        .modal-content p,.modal-content li{margin-bottom:10px;color:var(--gray)}
+        .modal-content ul{padding-left:20px}
+        
+        /* ANIMATIONS */
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        .fade-in{opacity:0;transform:translateY(30px);transition:var(--transition)}
+        .fade-in.visible{opacity:1;transform:translateY(0)}
+        
+        /* RESPONSIVE */
+        @media(max-width:768px){
+            .nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:var(--white);flex-direction:column;padding:20px;box-shadow:var(--shadow)}
+            .nav-links.active{display:flex}
+            .hamburger{display:flex}
+            .hero-content h1{font-size:2rem}
+            .hero-content p{font-size:1rem}
+            .section-title h2{font-size:1.8rem}
+            .products-grid{grid-template-columns:1fr}
+            .newsletter-form{flex-direction:column}
+            .social-icons{display:none}
+        }
+    </style>
+</head>
+<body>
+    <!-- TOP BANNER -->
+    <div class="top-banner">
+        <i class="fas fa-truck"></i>
+        Envíos rápidos desde Medellín | Pago contraentrega disponible
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">CG <span class="text-accent">Moda Plus</span></a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#coleccion">Colección</a></li>
+                    <li><a href="#como-funciona">Cómo Comprar</a></li>
+                    <li><a href="#resenas">Experiencias</a></li>
+                    <li><a href="https://wa.me/573007637773?text=Hola,%20necesito%20asesoría%20personalizada" target="_blank">Asesoría Privada</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://instagram.com/cgmodaplus" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/cgmodaplus" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://tiktok.com/@cgmodaplus" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Elegancia Exclusiva para la Mujer Moderna</h1>
+            <p>Descubre nuestra curaduría de prendas y accesorios premium</p>
+            <a href="#coleccion" class="btn">Ver Colección</a>
+        </div>
+    </section>
+
+    <!-- TRUST BADGES -->
+    <section class="trust-badges">
+        <div class="container">
+            <div class="badges-grid">
+                <div class="badge fade-in">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h4>Envío Rápido</h4>
+                    <p>Desde Medellín a toda Colombia</p>
+                </div>
+                <div class="badge fade-in">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Compra Segura</h4>
+                    <p>Pago contraentrega disponible</p>
+                </div>
+                <div class="badge fade-in">
+                    <i class="fas fa-gem"></i>
+                    <h4>Calidad Premium</h4>
+                    <p>Prendas seleccionadas con amor</p>
+                </div>
+                <div class="badge fade-in">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>Asesoría Personal</h4>
+                    <p>Te ayudamos a elegir tu estilo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="coleccion">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Nuestra <span class="text-accent">Colección</span></h2>
+                <p>Prendas y accesorios exclusivos para destacar tu estilo</p>
+            </div>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="como-funciona" class="how-it-works">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>¿Cómo <span class="text-accent">Comprar</span>?</h2>
+                <p>Proceso simple y seguro en 4 pasos</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step fade-in">
+                    <div class="step-number">1</div>
+                    <h3>Elige tu Prenda</h3>
+                    <p>Explora nuestra colección y selecciona lo que te guste</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">2</div>
+                    <h3>Consulta Disponibilidad</h3>
+                    <p>Escríbenos por WhatsApp para confirmar tallas y colores</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">3</div>
+                    <h3>Realiza tu Pago</h3>
+                    <p>Acepta Nequi, Daviplata, PSE o pago contraentrega</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">4</div>
+                    <h3>Recibe en Casa</h3>
+                    <p>Enviamos tu pedido de forma segura y rápida</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="resenas">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Experiencias de Nuestras <span class="text-accent">Clientas</span></h2>
+                <p>Lo que dicen sobre nosotras</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card fade-in">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"La calidad de las prendas es increíble. La chaqueta que compré es exactamente como en las fotos. El envío fue súper rápido a Bogotá."</p>
+                    <p class="review-author">- María Fernanda G.</p>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Me encantó la asesoría personalizada. Me ayudaron a elegir el accesorio perfecto para mi evento. ¡Totalmente recomendado!"</p>
+                    <p class="review-author">- Carolina M.</p>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Compré el set dorado y quedé fascinada. La atención por WhatsApp es excelente y muy rápida. Ya soy clienta frecuente."</p>
+                    <p class="review-author">- Valentina R.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Únete a Nuestro <span class="text-accent">Círculo Exclusivo</span></h2>
+            <p>Recibe ofertas especiales y acceso anticipado a nuevas colecciones</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit">Suscribirme</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>CG Moda Plus</h4>
+                    <p>Tu destino de moda exclusiva en Medellín. Prendas y accesorios seleccionados con amor para la mujer moderna.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#coleccion">Colección</a></li>
+                        <li><a href="#como-funciona">Cómo Comprar</a></li>
+                        <li><a href="#resenas">Experiencias</a></li>
+                        <li><a href="https://wa.me/573007637773" target="_blank">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Políticas</h4>
+                    <ul>
+                        <li><a href="#" onclick="openModal('envios');return false;">Envíos</a></li>
+                        <li><a href="#" onclick="openModal('pagos');return false;">Pagos</a></li>
+                        <li><a href="#" onclick="openModal('cambios');return false;">Cambios y Devoluciones</a></li>
+                        <li><a href="#" onclick="openModal('tallas');return false;">Guía de Tallas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/cgmodaplus" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/cgmodaplus" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://tiktok.com/@cgmodaplus" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CG Moda Plus. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/573007637773?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20productos" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- MODALS -->
+    <div class="modal" id="modalEnvios">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('envios')">&times;</button>
+            <h2>Política de Envíos</h2>
+            <h3>Envíos desde Medellín</h3>
+            <ul>
+                <li><strong>Medellín:</strong> Envío el mismo día (pedidos antes de las 2 PM)</li>
+                <li><strong>Área Metropolitana:</strong> 1-2 días hábiles</li>
+                <li><strong>Resto de Colombia:</strong> 3-5 días hábiles</li>
+            </ul>
+            <h3>Costos de Envío</h3>
+            <ul>
+                <li>Medellín: $10.000 COP</li>
+                <li>Área Metropolitana: $15.000 COP</li>
+                <li>Otras ciudades: $20.000 - $25.000 COP (según transportadora)</li>
+                <li><strong>ENVÍO GRATIS</strong> en compras superiores a $300.000 COP</li>
+            </ul>
+            <h3>Transportadoras</h3>
+            <p>Trabajamos con Servientrega, Interrapidísimo y mensajería local para garantizar la mejor experiencia.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modalPagos">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('pagos')">&times;</button>
+            <h2>Métodos de Pago</h2>
+            <h3>Opciones de Pago</h3>
+            <ul>
+                <li><strong>Nequi:</strong> Pago inmediato y seguro</li>
+                <li><strong>Daviplata:</strong> Rápido y conveniente</li>
+                <li><strong>Transferencia Bancolombia:</strong> A nuestra cuenta de ahorros</li>
+                <li><strong>PSE:</strong> Para compras desde cualquier banco</li>
+                <li><strong>Pago Contraentrega:</strong> Disponible en Medellín y Área Metropolitana</li>
+            </ul>
+            <h3>Proceso de Pago</h3>
+            <p>Una vez confirmes tu pedido por WhatsApp, te enviaremos los datos de pago. Tu pedido se reserva por 24 horas mientras realizas el pago.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modalCambios">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('cambios')">&times;</button>
+            <h2>Cambios y Devoluciones</h2>
+            <h3>Política de Cambios</h3>
+            <ul>
+                <li>Aceptamos cambios hasta 5 días después de recibir tu pedido</li>
+                <li>El producto debe estar sin uso, con etiquetas y en su empaque original</li>
+                <li>El costo del envío de devolución corre por cuenta del cliente</li>
+                <li>El nuevo envío se realiza una vez recibamos el producto</li>
+            </ul>
+            <h3>Devoluciones</h3>
+            <p>Solo aceptamos devoluciones en casos de:</p>
+            <ul>
+                <li>Producto con defectos de fábrica</li>
+                <li>Producto diferente al solicitado</li>
+                <li>Producto dañado durante el envío</li>
+            </ul>
+            <p>En estos casos, nos hacemos cargo de todos los costos de envío.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modalTallas">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('tallas')">&times;</button>
+            <h2>Guía de Tallas</h2>
+            <h3>Cómo Medirte</h3>
+            <ul>
+                <li><strong>Busto:</strong> Mide la parte más ancha de tu busto</li>
+                <li><strong>Cintura:</strong> Mide la parte más estrecha de tu cintura</li>
+                <li><strong>Cadera:</strong> Mide la parte más ancha de tu cadera</li>
+            </ul>
+            <h3>Tabla de Tallas (en centímetros)</h3>
+            <ul>
+                <li><strong>XS:</strong> Busto 80-84 | Cintura 60-64 | Cadera 86-90</li>
+                <li><strong>S:</strong> Busto 84-88 | Cintura 64-68 | Cadera 90-94</li>
+                <li><strong>M:</strong> Busto 88-92 | Cintura 68-72 | Cadera 94-98</li>
+                <li><strong>L:</strong> Busto 92-96 | Cintura 72-76 | Cadera 98-102</li>
+                <li><strong>XL:</strong> Busto 96-100 | Cintura 76-80 | Cadera 102-106</li>
+            </ul>
+            <p><strong>¿Dudas?</strong> Escríbenos por WhatsApp y te ayudamos a elegir tu talla perfecta.</p>
+        </div>
+    </div>
+
+    <script>
+        // CONFIGURACIÓN
+        const WHATSAPP_NUMBER = '573007637773';
+        
+        // PRODUCTOS
+        const products = [
+            {id:1,name:'Chaqueta Luxury',desc:'Elegante chaqueta con detalles dorados, perfecta para ocasiones especiales.',price:189000,img:'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800',badge:'Nuevo'},
+            {id:2,name:'Set Gold Premium',desc:'Conjunto de accesorios dorados que elevan cualquier outfit.',price:129000,img:'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=800',badge:'Popular'},
+            {id:3,name:'Vestido Noche Estrella',desc:'Vestido largo con escote elegante, ideal para eventos nocturnos.',price:249000,img:'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=800',badge:'Exclusivo'},
+            {id:4,name:'Blusa Seda Premium',desc:'Blusa de seda con corte sofisticado, cómoda y versátil.',price:159000,img:'https://images.unsplash.com/photo-1564257577-2d3ee8740ae0?q=80&w=800',badge:'Oferta'},
+            {id:5,name:'Bolso Elegance',desc:'Bolso de mano con detalles dorados, perfecto para complementar tu look.',price:179000,img:'https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=800',badge:'Nuevo'},
+            {id:6,name:'Conjunto Casual Chic',desc:'Set de dos piezas para un look casual pero sofisticado.',price:219000,img:'https://images.unsplash.com/photo-1485968579580-b6d095142e6e?q=80&w=800',badge:'Popular'}
+        ];
+
+        // RENDERIZAR PRODUCTOS
+        function renderProducts(){
+            const grid=document.getElementById('productsGrid');
+            const favorites=JSON.parse(localStorage.getItem('favorites')||'[]');
+            grid.innerHTML=products.map(p=>`
+                <div class="product-card fade-in">
+                    <span class="product-badge">${p.badge}</span>
+                    <button class="favorite-btn ${favorites.includes(p.id)?'active':''}" onclick="toggleFavorite(${p.id})">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <div class="product-image">
+                        <img src="${p.img}" alt="${p.name}" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>${p.name}</h3>
+                        <p>${p.desc}</p>
+                        <div class="product-price">$${p.price.toLocaleString('es-CO')}</div>
+                        <div class="product-actions">
+                            <a href="https://wa.me/${WHATSAPP_NUMBER}?text=Hola,%20me%20interesa%20${encodeURIComponent(p.name)}%20($${p.price.toLocaleString('es-CO')}).%20¿Está%20disponible?" target="_blank" class="btn">Comprar por WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            observeFadeIn();
+        }
+
+        // FAVORITOS
+        function toggleFavorite(id){
+            let favorites=JSON.parse(localStorage.getItem('favorites')||'[]');
+            if(favorites.includes(id)){
+                favorites=favorites.filter(f=>f!==id);
+            }else{
+                favorites.push(id);
+            }
+            localStorage.setItem('favorites',JSON.stringify(favorites));
+            renderProducts();
+        }
+
+        // MENÚ HAMBURGUESA
+        document.getElementById('hamburger').addEventListener('click',function(){
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+
+        // MODALES
+        function openModal(type){
+            document.getElementById('modal'+type.charAt(0).toUpperCase()+type.slice(1)).classList.add('active');
+        }
+        function closeModal(type){
+            document.getElementById('modal'+type.charAt(0).toUpperCase()+type.slice(1)).classList.remove('active');
+        }
+
+        // NEWSLETTER
+        document.getElementById('newsletterForm').addEventListener('submit',function(e){
+            e.preventDefault();
+            alert('¡Gracias por suscribirte! Pronto recibirás nuestras ofertas exclusivas.');
+            this.reset();
+        });
+
+        // ANIMACIONES SCROLL
+        function observeFadeIn(){
+            const observer=new IntersectionObserver((entries)=>{
+                entries.forEach(entry=>{
+                    if(entry.isIntersecting){
+                        entry.target.classList.add('visible');
+                    }
+                });
+            },{threshold:0.1});
+            document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+        }
+
+        // INICIALIZAR
+        renderProducts();
+        observeFadeIn();
+
+        // CERRAR MENÚ AL HACER CLICK EN ENLACE
+        document.querySelectorAll('.nav-links a').forEach(link=>{
+            link.addEventListener('click',()=>{
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
